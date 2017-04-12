@@ -1,3 +1,6 @@
+import constraintAnnotationExample.CaseMode;
+import constraintAnnotationExample.CheckCase;
+
 import javax.validation.Valid;
 import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.Min;
@@ -11,6 +14,7 @@ public class Car {
 
     @NotNull
     @Size(min = 2, max = 14)
+    @CheckCase(CaseMode.UPPER)
     private String licensePlate;
 
     @Min(2)
